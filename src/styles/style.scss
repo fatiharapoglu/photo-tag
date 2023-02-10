@@ -33,6 +33,21 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 10vw;
+    min-height: 75px;
     background-color: var(--background-header);
+
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+
+        a {
+            padding: 0.25rem 1rem;
+        }
+    }
+
+    .active {
+        border: 1px dashed gray;
+    }
 }
