@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ps1 from "../../assets/scenes/pierre-roussel-ps1-phone2.jpg";
 import Dropdown from "../Dropdown";
-import Timer from "../Timer";
-import cloud from "../../assets/characters/cloud.jpg";
-import heihachi from "../../assets/characters/heihachi.jpg";
-import leon from "../../assets/characters/leon.jpg";
+import Fixed from "../Fixed";
 
 const Game1 = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -59,33 +56,12 @@ const Game1 = () => {
                     found={found}
                 />
             )}
-            <div className="fixed">
-                <div>
-                    <ul className="characters">
-                        <li>
-                            <img src={heihachi} alt="heihachi" />
-                            <span className={found[characters[0]] ? "name crossed" : "name"}>
-                                {characters[0]}
-                            </span>
-                        </li>
-                        <li>
-                            <img src={leon} alt="leon" />
-                            <span className={found[characters[1]] ? "name crossed" : "name"}>
-                                {characters[1]}
-                            </span>
-                        </li>
-                        <li>
-                            <img src={cloud} alt="cloud" />
-                            <span className={found[characters[2]] ? "name crossed" : "name"}>
-                                {characters[2]}
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div className="timer">
-                    <Timer isGame={isGame} setGameTime={setGameTime} />
-                </div>
-            </div>
+            <Fixed
+                characters={characters}
+                setGameTime={setGameTime}
+                found={found}
+                isGame={isGame}
+            />
             {isGame && "gameover" + gameTime.toFixed(1)}
         </div>
     );
