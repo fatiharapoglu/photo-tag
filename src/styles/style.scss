@@ -102,12 +102,24 @@ body {
         position: fixed;
         right: 5rem;
         top: 10rem;
+        border: 1px dashed gray;
+        border-radius: 1rem;
     }
 
     .characters {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
     }
 
     .timer {
+        padding: 1rem;
+    }
+
+    .timer::after {
+        content: "seconds passed.";
+        padding-left: 1rem;
     }
 
     .dropdown {

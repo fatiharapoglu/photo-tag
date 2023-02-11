@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ps1 from "../../assets/pierre-roussel-ps1-phone2.jpg";
 import Dropdown from "../Dropdown";
+import Timer from "../Timer";
 
 const Game1 = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,6 +18,7 @@ const Game1 = () => {
         [characters[2]]: false,
     });
     const [isGame, setIsGame] = useState(false);
+    const [gameTime, setGameTime] = useState(0);
 
     useEffect(() => {
         if (Object.keys(found).every((key) => found[key] === true)) {
@@ -55,16 +57,18 @@ const Game1 = () => {
                 />
             )}
             <div className="fixed">
-                <div className="characters">
-                    <ul>
+                <div>
+                    <ul className="characters">
                         <li>{characters[0]}</li>
                         <li>{characters[1]}</li>
                         <li>{characters[2]}</li>
                     </ul>
                 </div>
-                <div className="timer">0</div>
+                <div className="timer">
+                    <Timer isGame={isGame} setGameTime={setGameTime} />
+                </div>
             </div>
-            {isGame && "gameover"}
+            {isGame && "gameover" + gameTime.toFixed(1)}
         </div>
     );
 };
