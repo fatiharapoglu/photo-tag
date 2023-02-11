@@ -10,16 +10,16 @@ const Main = () => {
         <main className="main">
             <h1>PICK A SCENE</h1>
             <div className="scenes">
-                <Link to="/game">
+                <Link to="/game/ps1">
                     <img src={ps1} alt="ps1" />
                 </Link>
-                <Link to="/game">
+                <Link to="/game/ps2">
                     <img src={ps2} alt="ps2" />
                 </Link>
-                <Link to="/game">
+                <Link to="/game/ps3">
                     <img src={ps3} alt="ps3" />
                 </Link>
-                <Link to="/game">
+                <Link to="/game/ps4">
                     <img src={ps4} alt="ps4" />
                 </Link>
             </div>
