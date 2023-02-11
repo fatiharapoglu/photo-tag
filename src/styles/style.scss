@@ -123,13 +123,18 @@ body {
 
             img:hover {
                 scale: 1.5;
-                border-radius: 2rem;
+                border-radius: 0.5rem;
             }
 
             li {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+            }
+
+            .crossed {
+                text-decoration: line-through;
+                opacity: 0.5;
             }
         }
 

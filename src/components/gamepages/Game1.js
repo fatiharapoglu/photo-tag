@@ -64,15 +64,21 @@ const Game1 = () => {
                     <ul className="characters">
                         <li>
                             <img src={heihachi} alt="heihachi" />
-                            {characters[0]}
+                            <span className={found[characters[0]] ? "name crossed" : "name"}>
+                                {characters[0]}
+                            </span>
                         </li>
                         <li>
                             <img src={leon} alt="leon" />
-                            {characters[1]}
+                            <span className={found[characters[1]] ? "name crossed" : "name"}>
+                                {characters[1]}
+                            </span>
                         </li>
                         <li>
                             <img src={cloud} alt="cloud" />
-                            {characters[2]}
+                            <span className={found[characters[2]] ? "name crossed" : "name"}>
+                                {characters[2]}
+                            </span>
                         </li>
                     </ul>
                 </div>
