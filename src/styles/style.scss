@@ -29,6 +29,7 @@ body {
     background-color: var(--background-primary);
     color: var(--primary);
     font-family: var(--font-1);
+    position: relative;
 }
 
 .header {
@@ -183,6 +184,26 @@ body {
             }
         }
     }
+}
+
+.modal {
+    position: fixed;
+    height: 50vh;
+    width: 50vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal.hidden {
+    visibility: hidden;
 }
 
 .footer {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ps1 from "../../assets/scenes/pierre-roussel-ps1-phone2.jpg";
 import Dropdown from "../Dropdown";
 import Fixed from "../Fixed";
+import Modal from "../Modal";
 
 const Game1 = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -62,7 +63,7 @@ const Game1 = () => {
                 found={found}
                 isGame={isGame}
             />
-            {isGame && "gameover" + gameTime.toFixed(1)}
+            {isGame && <Modal gameTime={gameTime} scene={"ps1"} />}
         </div>
     );
 };
