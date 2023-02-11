@@ -20,7 +20,7 @@ const App = () => {
                 <Route path="/game/ps2" element={<Game2 />} />
                 <Route path="/game/ps3" element={<Game3 />} />
                 <Route path="/game/ps4" element={<Game4 />} />
-                <Route path="/leaderboard" element={<Leaderboard />} />
+                <Route path="/leaderboard/*" element={<Leaderboard />} />
                 <Route path="/about" element={<About />} />
             </Routes>
             <Footer />

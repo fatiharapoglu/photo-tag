@@ -1,20 +1,23 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
 
 const Modal = (props) => {
     const [input, setInput] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(true);
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const name = input;
-        const score = props.gameTime.toFixed(1);
+        const score = Number(props.gameTime.toFixed(1));
         setIsModalOpen(false);
         await addDoc(collection(db, `lb-${props.scene}`), {
             name,
             score,
         });
+        navigate(`/leaderboard/${props.scene}`);
     };
 
     const handleChange = (e) => {

@@ -186,6 +186,36 @@ body {
     }
 }
 
+.leaderboard {
+    h1 {
+        text-align: center;
+        padding: 1rem;
+    }
+    .scenes {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+            width: clamp(75px, 10vw, 150px);
+            border: none;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: scale 0.25s ease-in-out;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        a:hover {
+            scale: 1.025;
+        }
+    }
+}
+
 .modal {
     position: fixed;
     height: 50vh;
