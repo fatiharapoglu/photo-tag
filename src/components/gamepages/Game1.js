@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ps1 from "../assets/pierre-roussel-ps1-phone2.jpg";
-import Dropdown from "./Dropdown";
+import React, { useEffect, useState } from "react";
+import ps1 from "../../assets/pierre-roussel-ps1-phone2.jpg";
+import Dropdown from "../Dropdown";
 
 const Game1 = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,6 +11,18 @@ const Game1 = () => {
         "Leon S. Kennedy (Resident Evil)",
         "Cloud Strife (Final Fantasy)",
     ];
+    const [found, setFound] = useState({
+        [characters[0]]: false,
+        [characters[1]]: false,
+        [characters[2]]: false,
+    });
+    const [isGame, setIsGame] = useState(false);
+
+    useEffect(() => {
+        if (Object.keys(found).every((key) => found[key] === true)) {
+            setIsGame(true);
+        }
+    }, [found]);
 
     const getPercentageLocation = (e) => {
         const x = Math.round((e.nativeEvent.offsetX / e.nativeEvent.target.offsetWidth) * 100);
@@ -34,18 +46,25 @@ const Game1 = () => {
             <img onClick={handleDropdown} className="game-img" src={ps1} alt="ps1" />
             {isDropdownOpen && (
                 <Dropdown
+                    setIsDropdownOpen={setIsDropdownOpen}
                     dropdownCoordinates={dropdownCoordinates}
                     characters={characters}
                     percentageCoordinates={percentageCoordinates}
+                    setFound={setFound}
+                    found={found}
                 />
             )}
-            <div className="characters">
-                <ul>
-                    <li>{characters[0]}</li>
-                    <li>{characters[1]}</li>
-                    <li>{characters[2]}</li>
-                </ul>
+            <div className="fixed">
+                <div className="characters">
+                    <ul>
+                        <li>{characters[0]}</li>
+                        <li>{characters[1]}</li>
+                        <li>{characters[2]}</li>
+                    </ul>
+                </div>
+                <div className="timer">0</div>
             </div>
+            {isGame && "gameover"}
         </div>
     );
 };

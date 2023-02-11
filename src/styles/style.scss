@@ -98,10 +98,16 @@ body {
         cursor: crosshair;
     }
 
-    .characters {
+    .fixed {
         position: fixed;
         right: 5rem;
         top: 10rem;
+    }
+
+    .characters {
+    }
+
+    .timer {
     }
 
     .dropdown {

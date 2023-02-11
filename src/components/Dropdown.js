@@ -5,6 +5,12 @@ import { doc, getDoc } from "firebase/firestore";
 const Dropdown = (props) => {
     const checkDB = async (e) => {
         const clickedChar = e.target.innerText;
+
+        if (props.found[clickedChar]) {
+            props.setIsDropdownOpen(false);
+            return console.log("already found");
+        }
+
         const docRef = doc(db, "characters", "locations");
         const docSnap = await getDoc(docRef);
         const charList = docSnap.data();
@@ -12,7 +18,8 @@ const Dropdown = (props) => {
         const charValue = charList[charKey];
         const { x, y } = props.percentageCoordinates;
         const clickedCoordinates = [x, y];
-        const tolerance = 2;
+        const tolerance = 2; // percentage
+
         if (
             clickedCoordinates[0] >= charValue[0] - tolerance &&
             clickedCoordinates[0] <= charValue[0] + tolerance &&
@@ -20,10 +27,14 @@ const Dropdown = (props) => {
             clickedCoordinates[1] <= charValue[1] + tolerance
         ) {
             console.log("oldu");
+            props.setFound({ ...props.found, [clickedChar]: true });
         } else {
             console.log("olmadı");
         }
+
+        props.setIsDropdownOpen(false);
     };
+
     return (
         <div className="dropdown" style={props.dropdownCoordinates}>
             <ul>
