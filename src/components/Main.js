@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ps1 from "../assets/pierre-roussel-ps1-phone2.jpg";
-import ps2 from "../assets/pierre-roussel-ps2-phone2.jpg";
-import ps3 from "../assets/pierre-roussel-ps3-phone2.jpg";
-import ps4 from "../assets/pierre-roussel-ps4-phone2.jpg";
+import ps1 from "../assets/scenes/pierre-roussel-ps1-phone2.jpg";
+import ps2 from "../assets/scenes/pierre-roussel-ps2-phone2.jpg";
+import ps3 from "../assets/scenes/pierre-roussel-ps3-phone2.jpg";
+import ps4 from "../assets/scenes/pierre-roussel-ps4-phone2.jpg";
 
 const Main = () => {
     return (

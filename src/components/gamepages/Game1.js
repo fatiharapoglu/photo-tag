@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import ps1 from "../../assets/pierre-roussel-ps1-phone2.jpg";
+import ps1 from "../../assets/scenes/pierre-roussel-ps1-phone2.jpg";
 import Dropdown from "../Dropdown";
 import Timer from "../Timer";
+import cloud from "../../assets/characters/cloud.jpg";
+import heihachi from "../../assets/characters/heihachi.jpg";
+import leon from "../../assets/characters/leon.jpg";
 
 const Game1 = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -59,9 +62,18 @@ const Game1 = () => {
             <div className="fixed">
                 <div>
                     <ul className="characters">
-                        <li>{characters[0]}</li>
-                        <li>{characters[1]}</li>
-                        <li>{characters[2]}</li>
+                        <li>
+                            <img src={heihachi} alt="heihachi" />
+                            {characters[0]}
+                        </li>
+                        <li>
+                            <img src={leon} alt="leon" />
+                            {characters[1]}
+                        </li>
+                        <li>
+                            <img src={cloud} alt="cloud" />
+                            {characters[2]}
+                        </li>
                     </ul>
                 </div>
                 <div className="timer">

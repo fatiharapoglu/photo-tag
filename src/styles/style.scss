@@ -100,26 +100,55 @@ body {
 
     .fixed {
         position: fixed;
-        right: 5rem;
-        top: 10rem;
+        right: 0;
+        top: 3rem;
         border: 1px dashed gray;
         border-radius: 1rem;
+        opacity: 0.5;
+        transition: all 0.25s ease-in-out;
+        scale: 0.75;
+
+        .characters {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                transition: all 0.25s ease-in-out;
+            }
+
+            img:hover {
+                scale: 1.5;
+                border-radius: 2rem;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        .timer {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .timer::after {
+            content: "seconds passed.";
+            padding-left: 1rem;
+        }
     }
 
-    .characters {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .timer {
-        padding: 1rem;
-    }
-
-    .timer::after {
-        content: "seconds passed.";
-        padding-left: 1rem;
+    .fixed:hover {
+        opacity: 0.9;
+        background-color: var(--background-header);
+        scale: 1.25;
+        transform: translate(-5rem, 5rem);
     }
 
     .dropdown {
