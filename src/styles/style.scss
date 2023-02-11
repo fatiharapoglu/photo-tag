@@ -90,8 +90,41 @@ body {
 }
 
 .game {
+    background-color: var(--background-header);
+    position: relative;
+
     .game-img {
         width: 100%;
+        cursor: crosshair;
+    }
+
+    .characters {
+        position: fixed;
+        right: 5rem;
+        top: 10rem;
+    }
+
+    .dropdown {
+        position: absolute;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 0.5rem;
+            background-color: rgb(0 0 0 / 75%);
+            gap: 0.5rem;
+            border: 1px dashed gray;
+            border-radius: 0.33rem;
+
+            li {
+                transition: color 0.25s ease-in-out;
+                cursor: pointer;
+            }
+
+            li:hover {
+                color: var(--hover);
+            }
+        }
     }
 }
 
@@ -99,6 +132,7 @@ body {
     display: flex;
     height: 7.5vh;
     justify-content: center;
+    background-color: var(--background-header);
 
     .about {
         display: flex;
@@ -135,7 +169,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--primary);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
