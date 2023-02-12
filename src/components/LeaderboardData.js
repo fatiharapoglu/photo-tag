@@ -30,16 +30,24 @@ const LeaderboardData = (props) => {
     };
 
     return (
-        <div>
-            <ul>
+        <div className="leaderboard-data">
+            <h1>{props.selectedScene}</h1>
+            <div className="table">
+                <div className="row">
+                    <div className="cell header">RANK</div>
+                    <div className="cell header">NAME</div>
+                    <div className="cell header">TIME (seconds)</div>
+                </div>
                 {list.map((item) => {
                     return (
-                        <li key={item.name}>
-                            {item.order} {item.name} {item.score}
-                        </li>
+                        <div className="row" key={item.name + item.order}>
+                            <div className="cell">{item.order}</div>
+                            <div className="cell">{item.name}</div>
+                            <div className="cell">{item.score}</div>
+                        </div>
                     );
                 })}
-            </ul>
+            </div>
         </div>
     );
 };

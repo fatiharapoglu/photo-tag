@@ -10,6 +10,9 @@ const Modal = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (input.length > 20) {
+            return console.log("nice try hacker");
+        }
         const name = input;
         const score = Number(props.gameTime.toFixed(1));
         await addDoc(collection(db, `lb-${props.selectedScene}`), {
@@ -34,6 +37,7 @@ const Modal = (props) => {
                     type="text"
                     placeholder="Enter your name please."
                     value={input}
+                    maxLength="20"
                     required
                 />
                 <button type="submit">Submit</button>
