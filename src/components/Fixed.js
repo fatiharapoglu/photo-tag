@@ -66,7 +66,11 @@ const Fixed = (props) => {
                 </ul>
             </div>
             <div className="timer">
-                <Timer isGame={props.isGame} setGameTime={props.setGameTime} />
+                <Timer
+                    isGame={props.isGame}
+                    setGameTime={props.setGameTime}
+                    isStarted={props.isStarted}
+                />
             </div>
         </div>
     );

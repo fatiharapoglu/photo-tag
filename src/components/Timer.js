@@ -7,6 +7,7 @@ const Timer = (props) => {
         if (props.isGame) {
             return props.setGameTime(time);
         }
+        if (props.isStarted === false) return;
         const timer = setInterval(() => {
             setTime((time) => time + 0.1);
         }, 100);

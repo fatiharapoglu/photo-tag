@@ -184,6 +184,22 @@ body {
             }
         }
     }
+
+    .starter {
+        position: fixed;
+        height: 50vh;
+        width: 50vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid red;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 .leaderboard {
@@ -312,6 +328,10 @@ body {
     transform: translateX(-50%);
     bottom: 10vh;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 ::-webkit-scrollbar {

@@ -6,6 +6,7 @@ import ps4 from "../assets/scenes/pierre-roussel-ps4-phone2.jpg";
 import Dropdown from "./Dropdown";
 import Fixed from "./Fixed";
 import Modal from "./Modal";
+import Starter from "./Starter";
 
 const Game = (props) => {
     let characters;
@@ -47,6 +48,14 @@ const Game = (props) => {
     });
     const [isGame, setIsGame] = useState(false);
     const [gameTime, setGameTime] = useState(0);
+    const [isStarted, setIsStarted] = useState(false);
+
+    useEffect(() => {
+        if (isStarted === true) return;
+        setTimeout(() => {
+            setIsStarted(true);
+        }, 5000);
+    }, [isStarted]);
 
     useEffect(() => {
         if (Object.keys(found).every((key) => found[key] === true)) {
@@ -71,7 +80,8 @@ const Game = (props) => {
     };
 
     return (
-        <div className="game">
+        <div className={isStarted ? "game" : "game disabled"}>
+            {isStarted === false && <Starter isStarted={isStarted} />}
             <img onClick={handleDropdown} className="game-img" src={gameImageSrc} alt="" />
             {isDropdownOpen && (
                 <Dropdown
@@ -90,6 +100,7 @@ const Game = (props) => {
                 found={found}
                 isGame={isGame}
                 selectedScene={props.selectedScene}
+                isStarted={isStarted}
             />
             {isGame && (
                 <Modal
