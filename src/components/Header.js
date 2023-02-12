@@ -13,7 +13,7 @@ const Header = () => {
                         <NavLink to="/"> Scenes</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/leaderboard"> Leaderboard</NavLink>
+                        <NavLink to="/leaderboard"> Leaderboards</NavLink>
                     </li>
                     <li>
                         <NavLink to="/about"> About</NavLink>

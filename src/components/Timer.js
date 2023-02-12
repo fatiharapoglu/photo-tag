@@ -13,7 +13,7 @@ const Timer = (props) => {
         return () => clearInterval(timer);
     }, [props]);
 
-    return <>{time.toFixed(1)}</>;
+    return <span>{time.toFixed(1)}</span>;
 };
 
 export default Timer;

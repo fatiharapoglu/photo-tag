@@ -46,7 +46,7 @@ const Game1 = () => {
 
     return (
         <div className="game">
-            <img onClick={handleDropdown} className="game-img" src={ps1} alt="ps1" />
+            <img onClick={handleDropdown} className="game-img" src={ps1} alt="" />
             {isDropdownOpen && (
                 <Dropdown
                     setIsDropdownOpen={setIsDropdownOpen}

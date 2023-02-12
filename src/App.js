@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import Footer from "./components/Footer";
@@ -11,6 +11,9 @@ import Leaderboard from "./components/Leaderboard";
 import Main from "./components/Main";
 
 const App = () => {
+    const [selectedGame, setSelectedGame] = useState(null);
+    const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);
+
     return (
         <>
             <Header />
