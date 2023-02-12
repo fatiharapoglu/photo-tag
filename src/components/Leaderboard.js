@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import ps1 from "../assets/scenes/pierre-roussel-ps1-phone2.jpg";
 import ps2 from "../assets/scenes/pierre-roussel-ps2-phone2.jpg";
 import ps3 from "../assets/scenes/pierre-roussel-ps3-phone2.jpg";
@@ -14,18 +14,18 @@ const Leaderboard = () => {
         <div className="leaderboard">
             <h1>LEADERBOARDS</h1>
             <div className="scenes">
-                <Link to="/leaderboard/ps1">
+                <NavLink to="/leaderboard/ps1">
                     <img src={ps1} alt="ps1" />
-                </Link>
-                <Link to="/leaderboard/ps2">
+                </NavLink>
+                <NavLink to="/leaderboard/ps2">
                     <img src={ps2} alt="ps2" />
-                </Link>
-                <Link to="/leaderboard/ps3">
+                </NavLink>
+                <NavLink to="/leaderboard/ps3">
                     <img src={ps3} alt="ps3" />
-                </Link>
-                <Link to="/leaderboard/ps4">
+                </NavLink>
+                <NavLink to="/leaderboard/ps4">
                     <img src={ps4} alt="ps4" />
-                </Link>
+                </NavLink>
             </div>
             <div>
                 <Routes>
