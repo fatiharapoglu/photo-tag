@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
+import Filter from "bad-words";
+import { trBadWords } from "../badwordlist";
 
 const Modal = (props) => {
     const [input, setInput] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(true);
     const navigate = useNavigate();
+    const filter = new Filter();
+    filter.addWords(...trBadWords);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (input.length > 20) {
             return props.handleSnackbar('Nice try, "hacker".');
         }
-        const name = input;
+        const name = filter.clean(input);
         const score = Number(props.gameTime.toFixed(1));
         await addDoc(collection(db, `lb-${props.selectedScene}`), {
             name,
