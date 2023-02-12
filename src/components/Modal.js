@@ -12,12 +12,12 @@ const Modal = (props) => {
         e.preventDefault();
         const name = input;
         const score = Number(props.gameTime.toFixed(1));
-        await addDoc(collection(db, `lb-${props.scene}`), {
+        await addDoc(collection(db, `lb-${props.selectedScene}`), {
             name,
             score,
         });
         setIsModalOpen(false);
-        navigate(`/leaderboard/${props.scene}`);
+        navigate(`/leaderboard`);
     };
 
     const handleChange = (e) => {

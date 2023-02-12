@@ -5,21 +5,26 @@ import ps2 from "../assets/scenes/pierre-roussel-ps2-phone2.jpg";
 import ps3 from "../assets/scenes/pierre-roussel-ps3-phone2.jpg";
 import ps4 from "../assets/scenes/pierre-roussel-ps4-phone2.jpg";
 
-const Main = () => {
+const Main = (props) => {
+    const selectScene = (e) => {
+        const selected = e.target.alt;
+        props.setSelectedScene(selected);
+    };
+
     return (
         <main className="main">
             <h1>PICK A SCENE</h1>
             <div className="scenes">
-                <Link to="/game/ps1">
+                <Link onClick={selectScene} to="/game">
                     <img src={ps1} alt="ps1" />
                 </Link>
-                <Link to="/game/ps2">
+                <Link onClick={selectScene} to="/game">
                     <img src={ps2} alt="ps2" />
                 </Link>
-                <Link to="/game/ps3">
+                <Link onClick={selectScene} to="/game">
                     <img src={ps3} alt="ps3" />
                 </Link>
-                <Link to="/game/ps4">
+                <Link onClick={selectScene} to="/game">
                     <img src={ps4} alt="ps4" />
                 </Link>
             </div>

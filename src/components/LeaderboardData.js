@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../../firebase";
+import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
-const Leaderboard1 = () => {
+const LeaderboardData = (props) => {
     const [list, setList] = useState([]);
 
     useEffect(() => {
         getData();
-    }, []);
+    }, [props.selectedScene]);
 
     const getData = async () => {
-        const querySnapshot = await getDocs(collection(db, "lb-ps1"));
+        const querySnapshot = await getDocs(collection(db, `lb-${props.selectedScene}`));
         const newList = [];
         querySnapshot.forEach((doc) => {
             const newObj = doc.data();
@@ -44,4 +44,4 @@ const Leaderboard1 = () => {
     );
 };
 
-export default Leaderboard1;
+export default LeaderboardData;
