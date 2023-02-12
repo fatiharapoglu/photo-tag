@@ -8,7 +8,7 @@ const Dropdown = (props) => {
 
         if (props.found[clickedChar]) {
             props.setIsDropdownOpen(false);
-            return console.log("already found");
+            return props.handleSnackbar("You have already found this character.");
         }
 
         const docRef = doc(db, "characters", "locations");
@@ -26,12 +26,14 @@ const Dropdown = (props) => {
             clickedCoordinates[1] >= charValue[1] - tolerance &&
             clickedCoordinates[1] <= charValue[1] + tolerance
         ) {
-            console.log("oldu");
             props.setFound({ ...props.found, [clickedChar]: true });
+            const howManyLeft =
+                Object.keys(props.found).filter((key) => props.found[key] !== true).length - 1;
+            if (howManyLeft === 0) return props.setIsDropdownOpen(false);
+            props.handleSnackbar(`Nice, ${howManyLeft} characters left.`);
         } else {
-            console.log("olmadı");
+            props.handleSnackbar("Nope, try again.");
         }
-
         props.setIsDropdownOpen(false);
     };
 

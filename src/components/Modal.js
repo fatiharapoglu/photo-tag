@@ -11,7 +11,7 @@ const Modal = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (input.length > 20) {
-            return console.log("nice try hacker");
+            return props.handleSnackbar('Nice try, "hacker".');
         }
         const name = input;
         const score = Number(props.gameTime.toFixed(1));

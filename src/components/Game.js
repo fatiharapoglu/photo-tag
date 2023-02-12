@@ -65,7 +65,6 @@ const Game = (props) => {
             return setIsDropdownOpen(false);
         }
         const { x, y } = getPercentageLocation(e);
-        console.log(x, y);
         setIsDropdownOpen(true);
         setPercentageCoordinates({ x, y });
         setDropdownCoordinates({ left: x + "%", top: y + "%" });
@@ -82,6 +81,7 @@ const Game = (props) => {
                     percentageCoordinates={percentageCoordinates}
                     setFound={setFound}
                     found={found}
+                    handleSnackbar={props.handleSnackbar}
                 />
             )}
             <Fixed
@@ -91,7 +91,13 @@ const Game = (props) => {
                 isGame={isGame}
                 selectedScene={props.selectedScene}
             />
-            {isGame && <Modal gameTime={gameTime} selectedScene={props.selectedScene} />}
+            {isGame && (
+                <Modal
+                    gameTime={gameTime}
+                    selectedScene={props.selectedScene}
+                    handleSnackbar={props.handleSnackbar}
+                />
+            )}
         </div>
     );
 };
