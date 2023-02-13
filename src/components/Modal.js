@@ -13,11 +13,15 @@ const Modal = (props) => {
     filter.addWords(...trBadWords);
 
     const handleSubmit = async (e) => {
+        let name;
         e.preventDefault();
         if (input.length > 20) {
             return props.handleSnackbar('Nice try, "hacker".');
         }
-        const name = filter.clean(input);
+        if (input.at(0) === ":") {
+            return props.handleSnackbar('Please provide an input which does not start with ":"');
+        }
+        name = filter.clean(input);
         const score = Number(props.gameTime.toFixed(1));
         await addDoc(collection(db, `lb-${props.selectedScene}`), {
             name,
