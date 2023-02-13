@@ -13,7 +13,7 @@ const Main = (props) => {
 
     return (
         <main className="main">
-            <h1>PICK A SCENE</h1>
+            <h1 className="text-shadow">CHOOSE A SCENE</h1>
             <div className="scenes">
                 <Link onClick={selectScene} to="/game">
                     <img src={ps1} alt="ps1" />

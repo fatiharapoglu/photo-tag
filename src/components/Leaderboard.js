@@ -13,20 +13,22 @@ const Leaderboard = (props) => {
 
     return (
         <div className="leaderboard">
-            <h1>LEADERBOARDS</h1>
-            <div className="scenes">
-                <button onClick={selectScene}>
-                    <img src={ps1} alt="ps1" />
-                </button>
-                <button onClick={selectScene}>
-                    <img src={ps2} alt="ps2" />
-                </button>
-                <button onClick={selectScene}>
-                    <img src={ps3} alt="ps3" />
-                </button>
-                <button onClick={selectScene}>
-                    <img src={ps4} alt="ps4" />
-                </button>
+            <div className="scenes-wrapper">
+                <h1 className="text-shadow">LEADERBOARDS</h1>
+                <div className="scenes">
+                    <button onClick={selectScene}>
+                        <img src={ps1} alt="ps1" />
+                    </button>
+                    <button onClick={selectScene}>
+                        <img src={ps2} alt="ps2" />
+                    </button>
+                    <button onClick={selectScene}>
+                        <img src={ps3} alt="ps3" />
+                    </button>
+                    <button onClick={selectScene}>
+                        <img src={ps4} alt="ps4" />
+                    </button>
+                </div>
             </div>
             <LeaderboardData selectedScene={props.selectedScene} />
         </div>

@@ -9,7 +9,7 @@ import Main from "./components/Main";
 import Snackbar from "./components/Snackbar";
 
 const App = () => {
-    const [selectedScene, setSelectedScene] = useState(null);
+    const [selectedScene, setSelectedScene] = useState("ps1");
     const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
     const [snackbarText, setSnackbarText] = useState("");
 

@@ -37,7 +37,9 @@ const Fixed = (props) => {
     return (
         <div className="fixed">
             <div>
-                <h1>findThis</h1>
+                <h1>
+                    <span className="word">find</span>This
+                </h1>
                 <ul className="characters">
                     <li>
                         <img src={src1} alt="character" />
