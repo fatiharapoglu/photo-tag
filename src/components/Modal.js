@@ -31,6 +31,11 @@ const Modal = (props) => {
         setInput(e.target.value);
     };
 
+    const handleCloseBtn = () => {
+        setIsModalOpen(false);
+        navigate(`/`);
+    };
+
     return (
         <div className={isModalOpen ? "modal" : "modal hidden"}>
             <h1>GAME OVER</h1>
@@ -52,12 +57,7 @@ const Modal = (props) => {
                     Submit your score.
                 </button>
             </form>
-            <button
-                onClick={() => {
-                    setIsModalOpen(false);
-                }}
-                className="close-btn btn"
-            ></button>
+            <button onClick={handleCloseBtn} className="close-btn btn"></button>
         </div>
     );
 };
