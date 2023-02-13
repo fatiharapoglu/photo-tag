@@ -1,6 +1,5 @@
 # photoTag
 
-blur çöz
 borderlar
 logo / name
 hoverlar

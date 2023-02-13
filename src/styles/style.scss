@@ -1,11 +1,17 @@
 @import-normalize;
 
+@font-face {
+    font-family: "EmotionEngine";
+    src: url("../assets/fonts/EmotionEngine.ttf");
+}
+
 :root {
     --primary: rgb(230, 230, 230);
     --background-primary: rgb(17, 17, 17);
     --background-header: rgb(11, 13, 22);
     --hover: rgb(80, 176, 255);
     --font-1: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    --font-2: "EmotionEngine";
 }
 
 * {
@@ -39,6 +45,12 @@ body {
     padding: 1rem 10vw;
     height: 75px;
     background-color: var(--background-header);
+    font-family: var(--font-2);
+
+    .logo {
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+    }
 
     .nav-links {
         display: flex;
@@ -46,11 +58,17 @@ body {
 
         a {
             padding: 0.25rem 1rem;
+            transition: color 0.25s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--hover);
         }
     }
 
     .active {
         border: 1px dashed gray;
+        color: var(--hover);
     }
 }
 
