@@ -5,9 +5,9 @@ import { doc, getDoc } from "firebase/firestore";
 const Dropdown = (props) => {
     const checkDB = async (e) => {
         const clickedChar = e.target.innerText;
+        props.setIsDropdownOpen(false);
 
         if (props.found[clickedChar]) {
-            props.setIsDropdownOpen(false);
             return props.handleSnackbar("You have already found this character.");
         }
 
@@ -29,12 +29,11 @@ const Dropdown = (props) => {
             props.setFound({ ...props.found, [clickedChar]: true });
             const howManyLeft =
                 Object.keys(props.found).filter((key) => props.found[key] !== true).length - 1;
-            if (howManyLeft === 0) return props.setIsDropdownOpen(false);
+            if (howManyLeft === 0) return;
             props.handleSnackbar(`Nice, ${howManyLeft} characters left.`);
         } else {
             props.handleSnackbar("Nope, try again.");
         }
-        props.setIsDropdownOpen(false);
     };
 
     return (

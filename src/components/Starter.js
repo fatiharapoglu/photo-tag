@@ -14,7 +14,7 @@ const Starter = (props) => {
     }, [props.isStarted]);
 
     return (
-        <div className="starter">
+        <div className="modal">
             <h1>GET READY</h1>
             <div className="starter-characters">Characters</div>
             <div className="countdown">{countdown}</div>
