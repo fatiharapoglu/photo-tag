@@ -12,9 +12,15 @@ const App = () => {
     const [selectedScene, setSelectedScene] = useState("ps1");
     const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
     const [snackbarText, setSnackbarText] = useState("");
+    const [snackbarColor, setSnackbarColor] = useState("success");
 
-    const handleSnackbar = (text) => {
+    const handleSnackbar = (text, color = "success") => {
         setIsSnackbarOpen(true);
+        if (color === "success") {
+            setSnackbarColor("success");
+        } else {
+            setSnackbarColor("error");
+        }
         setSnackbarText(text);
     };
 
@@ -46,7 +52,9 @@ const App = () => {
                 <Route path="/about" element={<About />} />
             </Routes>
             <Footer />
-            {isSnackbarOpen && <Snackbar snackbarText={snackbarText} />}
+            {isSnackbarOpen && (
+                <Snackbar snackbarText={snackbarText} snackbarColor={snackbarColor} />
+            )}
         </>
     );
 };

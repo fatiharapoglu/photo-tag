@@ -8,7 +8,7 @@ const Dropdown = (props) => {
         props.setIsDropdownOpen(false);
 
         if (props.found[clickedChar]) {
-            return props.handleSnackbar("You have already found this character.");
+            return props.handleSnackbar("You have already found this character.", "error");
         }
 
         const docRef = doc(db, "characters", "locations");
@@ -32,7 +32,7 @@ const Dropdown = (props) => {
             if (howManyLeft === 0) return;
             props.handleSnackbar(`Correct, ${howManyLeft} characters left.`);
         } else {
-            props.handleSnackbar("Nope, try again.");
+            props.handleSnackbar("Nope, try again.", "error");
         }
     };
 

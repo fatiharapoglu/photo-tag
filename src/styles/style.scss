@@ -20,6 +20,7 @@
         rgb(30 30 30) 81.3%
     );
     --hover: #fa6865;
+    --color1: #40df9c;
     --color2: #fa6865;
     --color3: #7cb1e7;
     --font-1: "Chakra Petch", sans-serif;
@@ -529,7 +530,6 @@ body {
 .snackbar {
     min-width: 250px;
     background-image: var(--background-header);
-    color: var(--hover);
     text-align: center;
     border-radius: 0.5rem;
     padding: 1rem 2rem;
@@ -539,6 +539,14 @@ body {
     transform: translateX(-50%);
     bottom: 10vh;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+    .error {
+        color: var(--color2);
+    }
+
+    .success {
+        color: var(--color1);
+    }
 }
 
 .disabled {

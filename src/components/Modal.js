@@ -16,10 +16,19 @@ const Modal = (props) => {
         let name;
         e.preventDefault();
         if (input.length > 20) {
-            return props.handleSnackbar('Nice try, "hacker".');
+            return props.handleSnackbar('Nice try, "hacker".', "error");
         }
-        if (input.at(0) === ":") {
-            return props.handleSnackbar('Please provide an input which does not start with ":"');
+        if (
+            input.at(0) === ":" ||
+            input.at(0) === "(" ||
+            input.at(0) === ")" ||
+            input.at(0) === "[" ||
+            input.at(0) === "]"
+        ) {
+            return props.handleSnackbar(
+                'Please provide an input which does not start with ":" or parentheses.',
+                "error"
+            );
         }
         name = filter.clean(input);
         const score = Number(props.gameTime.toFixed(1));
