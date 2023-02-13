@@ -1,3 +1,5 @@
 # photoTag
 
-https://www.artstation.com/artwork/oOVVlJ
+secure firebase?
+add favicon
+host firebase or github howto
