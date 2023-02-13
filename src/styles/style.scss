@@ -8,6 +8,7 @@
 
 :root {
     --primary: snow;
+    --secondary: #2c2c2c;
     --background-primary: radial-gradient(
         circle farthest-corner at 10% 20%,
         rgb(45 91 160) 0%,
@@ -302,7 +303,7 @@ body {
         td {
             padding: 1rem;
             background-color: rgba(255, 255, 255, 0.25);
-            color: #2c2c2c;
+            color: var(--secondary);
         }
 
         th {
@@ -480,6 +481,44 @@ body {
     a {
         transition: color 0.2s ease-in-out;
         color: var(--color3);
+    }
+
+    a:hover {
+        color: var(--hover);
+    }
+}
+
+.information {
+    min-height: calc(92.5vh - 75px);
+    padding: 5rem;
+    color: var(--secondary);
+
+    h1 {
+        text-align: center;
+        padding: 1rem;
+        color: var(--primary);
+    }
+
+    h2,
+    h3 {
+        padding: 1rem 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    li {
+        list-style: disc;
+        list-style-position: inside;
+        padding: 1rem;
+    }
+
+    a {
+        font-weight: bold;
+        color: var(--color3);
+        text-shadow: 1px 1px 5px black;
     }
 
     a:hover {
