@@ -505,15 +505,21 @@ body {
         padding: 1rem 0;
     }
 
+    h2 {
+        text-align: right;
+        font-weight: normal;
+    }
+
     p {
         font-size: 1.5rem;
         padding: 1rem 0;
+        text-align: justify;
     }
 
     li {
         list-style: disc;
         list-style-position: inside;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     a {

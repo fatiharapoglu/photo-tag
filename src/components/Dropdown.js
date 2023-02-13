@@ -1,6 +1,8 @@
 import React from "react";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
+import trueSound from "../assets/sounds/true.wav";
+import falseSound from "../assets/sounds/false.wav";
 
 const Dropdown = (props) => {
     const checkDB = async (e) => {
@@ -27,11 +29,13 @@ const Dropdown = (props) => {
             clickedCoordinates[1] <= charValue[1] + tolerance
         ) {
             props.setFound({ ...props.found, [clickedChar]: true });
+            new Audio(trueSound).play();
             const howManyLeft =
                 Object.keys(props.found).filter((key) => props.found[key] !== true).length - 1;
             if (howManyLeft === 0) return;
             props.handleSnackbar(`Correct, ${howManyLeft} characters left.`);
         } else {
+            new Audio(falseSound).play();
             props.handleSnackbar("Nope, try again.", "error");
         }
     };

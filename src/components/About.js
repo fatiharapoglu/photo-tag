@@ -19,8 +19,12 @@ const About = () => {
                     <a href="https://www.npmjs.com/package/bad-words">Bad-Words</a> library is used
                     for censoring... bad-words when player input includes bad words.
                 </li>
-                <li>Snackbar alerts for giving information about certain situations.</li>
+                <li>
+                    Snackbar alerts with color based on error or success, giving information about
+                    certain situations.
+                </li>
                 <li>Responsive design.</li>
+                <li>Audio feedback when guessed correct or incorrect.</li>
             </ul>
 
             <h2>
