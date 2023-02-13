@@ -33,10 +33,14 @@ const Modal = (props) => {
 
     return (
         <div className={isModalOpen ? "modal" : "modal hidden"}>
-            <div>{props.gameTime.toFixed(1) + " seconds"}</div>
+            <h1>GAME OVER</h1>
+            <h2>
+                You found all characters in <span>{props.gameTime.toFixed(1)}</span> seconds.
+            </h2>
+            <p>You can submit your score and see your rank in leaderboard.</p>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name:</label>
                 <input
+                    className="input"
                     onChange={handleChange}
                     type="text"
                     placeholder="Enter your name please."
@@ -44,8 +48,16 @@ const Modal = (props) => {
                     maxLength="20"
                     required
                 />
-                <button type="submit">Submit</button>
+                <button className="btn" type="submit">
+                    Submit your score.
+                </button>
             </form>
+            <button
+                onClick={() => {
+                    setIsModalOpen(false);
+                }}
+                className="close-btn btn"
+            ></button>
         </div>
     );
 };

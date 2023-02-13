@@ -30,7 +30,7 @@ const Dropdown = (props) => {
             const howManyLeft =
                 Object.keys(props.found).filter((key) => props.found[key] !== true).length - 1;
             if (howManyLeft === 0) return;
-            props.handleSnackbar(`Nice, ${howManyLeft} characters left.`);
+            props.handleSnackbar(`Correct, ${howManyLeft} characters left.`);
         } else {
             props.handleSnackbar("Nope, try again.");
         }
