@@ -289,23 +289,62 @@ body {
             text-transform: uppercase;
         }
 
-        .table {
-            display: table;
-            width: 100%;
+        table {
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-bottom: 1rem;
+            border-radius: 0.75rem;
         }
 
-        .row {
-            display: table-row;
+        th,
+        td {
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.25);
+            color: #2c2c2c;
         }
 
-        .cell {
-            display: table-cell;
-            padding: 8px;
-            border: 1px dashed gray;
+        th {
+            text-align: left;
+
+            &:nth-child(2) {
+                width: 50vw;
+            }
         }
 
-        .table-header {
-            font-weight: bold;
+        thead {
+            background-image: var(--background-primary);
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+
+            td {
+                position: relative;
+
+                &:hover {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: -9999px;
+                        bottom: -9999px;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        z-index: -1;
+                    }
+                }
+
+                &:first-child {
+                    font-weight: bold;
+                    text-align: right;
+                }
+            }
         }
     }
 }
