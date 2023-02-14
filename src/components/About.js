@@ -13,7 +13,7 @@ const About = () => {
             </p>
             <h3>Features</h3>
             <ul>
-                <li>4 Unique PlayStation levels.</li>
+                <li>4 unique PlayStation levels.</li>
                 <li>Leaderboards for all levels that updates in realtime.</li>
                 <li>
                     <a href="https://www.npmjs.com/package/bad-words">Bad-Words</a> library is used
