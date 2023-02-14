@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/photoTag/static/css/main.2d2577bc.css",
-    "main.js": "/photoTag/static/js/main.dd44f286.js",
+    "main.js": "/photoTag/static/js/main.3af79b2f.js",
     "static/media/pierre-roussel-ps1-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps1-phone2.8af9d773590969bddf35.jpg",
     "static/media/pierre-roussel-ps3-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps3-phone2.836a7f7d5347075fd5aa.jpg",
     "static/media/pierre-roussel-ps2-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps2-phone2.ad63c9c04796b31e9b28.jpg",
@@ -24,10 +24,10 @@
     "static/media/joker.jpg": "/photoTag/static/media/joker.6bc68e3d19af67cdc59e.jpg",
     "index.html": "/photoTag/index.html",
     "main.2d2577bc.css.map": "/photoTag/static/css/main.2d2577bc.css.map",
-    "main.dd44f286.js.map": "/photoTag/static/js/main.dd44f286.js.map"
+    "main.3af79b2f.js.map": "/photoTag/static/js/main.3af79b2f.js.map"
   },
   "entrypoints": [
     "static/css/main.2d2577bc.css",
-    "static/js/main.dd44f286.js"
+    "static/js/main.3af79b2f.js"
   ]
 }
