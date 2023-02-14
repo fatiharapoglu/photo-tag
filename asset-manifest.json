@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/photoTag/static/css/main.2d2577bc.css",
+    "main.js": "/photoTag/static/js/main.dd44f286.js",
+    "static/media/pierre-roussel-ps1-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps1-phone2.8af9d773590969bddf35.jpg",
+    "static/media/pierre-roussel-ps3-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps3-phone2.836a7f7d5347075fd5aa.jpg",
+    "static/media/pierre-roussel-ps2-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps2-phone2.ad63c9c04796b31e9b28.jpg",
+    "static/media/pierre-roussel-ps4-phone2.jpg": "/photoTag/static/media/pierre-roussel-ps4-phone2.6bc8c564020184b4ab46.jpg",
+    "static/media/true.wav": "/photoTag/static/media/true.f1f96272b3b6267e3c5f.wav",
+    "static/media/cloud.jpg": "/photoTag/static/media/cloud.bfa518de848510e139ea.jpg",
+    "static/media/jimmy.jpg": "/photoTag/static/media/jimmy.497b3ab9c4d3fa9cbad6.jpg",
+    "static/media/false.wav": "/photoTag/static/media/false.b2d0f95baccca983e2f5.wav",
+    "static/media/ps.png": "/photoTag/static/media/ps.163660242064d32d8781.png",
+    "static/media/ellie.jpg": "/photoTag/static/media/ellie.ae2d3d1267ebed63daef.jpg",
+    "static/media/snake.jpg": "/photoTag/static/media/snake.0e9b868b393c3ce231d0.jpg",
+    "static/media/doll.jpg": "/photoTag/static/media/doll.fd7b51681a76cbb4303a.jpg",
+    "static/media/leon.jpg": "/photoTag/static/media/leon.7f9f518c81e8cfe33eea.jpg",
+    "static/media/kratos.jpg": "/photoTag/static/media/kratos.31c43de2034234de079c.jpg",
+    "static/media/heihachi.jpg": "/photoTag/static/media/heihachi.661e98540d3f52a05b15.jpg",
+    "static/media/nathan.jpg": "/photoTag/static/media/nathan.801e04dfb6f1d62363ed.jpg",
+    "static/media/tommy.jpg": "/photoTag/static/media/tommy.39b26514222dada810f8.jpg",
+    "static/media/twob.jpg": "/photoTag/static/media/twob.cc7088250cca660dcd1a.jpg",
+    "static/media/EmotionEngine.ttf": "/photoTag/static/media/EmotionEngine.808f149f44adb750e7f4.ttf",
+    "static/media/joker.jpg": "/photoTag/static/media/joker.6bc68e3d19af67cdc59e.jpg",
+    "index.html": "/photoTag/index.html",
+    "main.2d2577bc.css.map": "/photoTag/static/css/main.2d2577bc.css.map",
+    "main.dd44f286.js.map": "/photoTag/static/js/main.dd44f286.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d2577bc.css",
+    "static/js/main.dd44f286.js"
+  ]
+}
