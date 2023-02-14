@@ -1,6 +1,7 @@
 {
     "name": "phototag",
     "version": "0.1.0",
+    "homepage": "http://fatiharapoglu.github.io/photoTag/",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
@@ -19,7 +20,9 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -42,6 +45,7 @@
     },
     "devDependencies": {
         "eslint-config-prettier": "^8.6.0",
+        "gh-pages": "^5.0.0",
         "prettier": "2.8.4"
     }
 }
