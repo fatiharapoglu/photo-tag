@@ -35,13 +35,13 @@ const App = () => {
         <>
             <Header />
             <Routes>
-                <Route path="/" element={<Main setSelectedScene={setSelectedScene} />} />
+                <Route path="/photoTag/" element={<Main setSelectedScene={setSelectedScene} />} />
                 <Route
-                    path="/game"
+                    path="/photoTag/game"
                     element={<Game selectedScene={selectedScene} handleSnackbar={handleSnackbar} />}
                 />
                 <Route
-                    path="/leaderboard"
+                    path="/photoTag/leaderboard"
                     element={
                         <Leaderboard
                             selectedScene={selectedScene}
@@ -49,7 +49,7 @@ const App = () => {
                         />
                     }
                 />
-                <Route path="/about" element={<About />} />
+                <Route path="/photoTag/about" element={<About />} />
             </Routes>
             <Footer />
             {isSnackbarOpen && (

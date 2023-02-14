@@ -37,7 +37,7 @@ const Modal = (props) => {
             score,
         });
         setIsModalOpen(false);
-        navigate(`/leaderboard`);
+        navigate(`/photoTag/leaderboard`);
     };
 
     const handleChange = (e) => {
@@ -46,7 +46,7 @@ const Modal = (props) => {
 
     const handleCloseBtn = () => {
         setIsModalOpen(false);
-        navigate(`/`);
+        navigate(`/photoTag/`);
     };
 
     return (

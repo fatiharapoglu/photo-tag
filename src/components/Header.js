@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <nav className="header">
             <div className="logo">
-                <Link to="/">
+                <Link to="/photoTag/">
                     <span className="word">find</span>This
                     <img src={ps} alt="logo" />
                 </Link>
@@ -14,13 +14,13 @@ const Header = () => {
             <div>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to="/"> Scenes</NavLink>
+                        <NavLink to="/photoTag/"> Scenes</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/leaderboard"> Leaderboards</NavLink>
+                        <NavLink to="/photoTag/leaderboard"> Leaderboards</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about"> About</NavLink>
+                        <NavLink to="/photoTag/about"> About</NavLink>
                     </li>
                 </ul>
             </div>
