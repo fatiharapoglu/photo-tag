@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "./components/About";
+
 import Footer from "./components/Footer";
 import Game from "./components/Game";
 import Header from "./components/Header";
 import Leaderboard from "./components/Leaderboard";
 import Main from "./components/Main";
 import Snackbar from "./components/Snackbar";
+import NotFound from "./components/404";
 
 const App = () => {
     const [selectedScene, setSelectedScene] = useState("ps1");
@@ -35,13 +36,13 @@ const App = () => {
         <>
             <Header />
             <Routes>
-                <Route path="/photoTag/" element={<Main setSelectedScene={setSelectedScene} />} />
+                <Route path="/" element={<Main setSelectedScene={setSelectedScene} />} />
                 <Route
-                    path="/photoTag/game"
+                    path="/game"
                     element={<Game selectedScene={selectedScene} handleSnackbar={handleSnackbar} />}
                 />
                 <Route
-                    path="/photoTag/leaderboard"
+                    path="/leaderboard"
                     element={
                         <Leaderboard
                             selectedScene={selectedScene}
@@ -49,7 +50,7 @@ const App = () => {
                         />
                     }
                 />
-                <Route path="/photoTag/about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
             {isSnackbarOpen && (

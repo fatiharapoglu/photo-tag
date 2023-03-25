@@ -1,12 +1,12 @@
-import React from "react";
 import { Link, NavLink } from "react-router-dom";
+
 import ps from "../assets/ps.png";
 
 const Header = () => {
     return (
         <nav className="header">
             <div className="logo">
-                <Link to="/photoTag/">
+                <Link to="/">
                     <span className="word">find</span>This
                     <img src={ps} alt="logo" />
                 </Link>
@@ -14,13 +14,10 @@ const Header = () => {
             <div>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to="/photoTag/"> Scenes</NavLink>
+                        <NavLink to="/"> Scenes</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/photoTag/leaderboard"> Leaderboards</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/photoTag/about"> About</NavLink>
+                        <NavLink to="/leaderboard"> Leaderboards</NavLink>
                     </li>
                 </ul>
             </div>

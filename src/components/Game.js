@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
 import ps1 from "../assets/scenes/pierre-roussel-ps1-phone2.jpg";
 import ps2 from "../assets/scenes/pierre-roussel-ps2-phone2.jpg";
 import ps3 from "../assets/scenes/pierre-roussel-ps3-phone2.jpg";

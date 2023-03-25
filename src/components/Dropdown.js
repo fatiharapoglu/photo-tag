@@ -1,6 +1,6 @@
-import React from "react";
-import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
+
+import { db } from "../firebase";
 import trueSound from "../assets/sounds/true.wav";
 import falseSound from "../assets/sounds/false.wav";
 
