@@ -280,6 +280,7 @@ body {
     .leaderboard-data {
         h1 {
             text-transform: uppercase;
+            letter-spacing: 0.5rem;
         }
 
         table {
@@ -459,7 +460,7 @@ body {
         height: 25px;
         padding-left: 10px;
         padding: 0 10px;
-        transition: transform 1s ease-in-out;
+        transition: transform 0.5s ease-in-out;
 
         &:hover {
             transform: rotate(360deg);
@@ -469,50 +470,6 @@ body {
     a {
         transition: color 0.2s ease-in-out;
         color: var(--color3);
-
-        &:hover {
-            color: var(--hover);
-        }
-    }
-}
-
-.information {
-    min-height: calc(92.5vh - 75px);
-    padding: 5rem 15vw;
-    color: var(--secondary);
-
-    h1 {
-        text-align: center;
-        padding: 1rem;
-        color: var(--primary);
-    }
-
-    h2,
-    h3 {
-        padding: 1rem 0;
-    }
-
-    h2 {
-        text-align: right;
-        font-weight: normal;
-    }
-
-    p {
-        font-size: 1.5rem;
-        padding: 1rem 0;
-        text-align: justify;
-    }
-
-    li {
-        list-style: disc;
-        list-style-position: inside;
-        padding: 0.5rem;
-    }
-
-    a {
-        font-weight: bold;
-        color: var(--color3);
-        text-shadow: 1px 1px 5px black;
 
         &:hover {
             color: var(--hover);
@@ -559,6 +516,39 @@ body {
     opacity: 0.5;
 }
 
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 84.4vh;
+
+    .error-code {
+        font-size: 5rem;
+        color: darkred;
+    }
+
+    a {
+        font-size: 1.25rem;
+        color: lightblue;
+
+        &:hover {
+            color: rgb(24, 24, 24);
+        }
+    }
+}
+
+.spinner {
+    border: 8px solid var(--secondary);
+    border-top: 8px solid var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
 ::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -597,5 +587,14 @@ body {
     to {
         bottom: 0;
         opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

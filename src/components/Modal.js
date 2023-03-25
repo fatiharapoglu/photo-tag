@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { db } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import Filter from "bad-words";
+
+import { db } from "../firebase";
 import { trBadWords } from "../badwordlist";
+import Loading from "./Loading";
 
 const Modal = (props) => {
     const [input, setInput] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+
     const navigate = useNavigate();
     const filter = new Filter();
     filter.addWords(...trBadWords);
 
     const handleSubmit = async (e) => {
-        let name;
         e.preventDefault();
+        let name;
         if (input.length > 20) {
             return props.handleSnackbar('Nice try, "hacker".', "error");
         }
@@ -32,12 +36,14 @@ const Modal = (props) => {
         }
         name = filter.clean(input);
         const score = Number(props.gameTime.toFixed(1));
+        setIsLoading(true);
         await addDoc(collection(db, `lb-${props.selectedScene}`), {
             name,
             score,
         });
+        setIsLoading(false);
         setIsModalOpen(false);
-        navigate(`/photoTag/leaderboard`);
+        navigate("/leaderboard");
     };
 
     const handleChange = (e) => {
@@ -46,7 +52,7 @@ const Modal = (props) => {
 
     const handleCloseBtn = () => {
         setIsModalOpen(false);
-        navigate(`/photoTag/`);
+        navigate("/");
     };
 
     return (
@@ -66,9 +72,13 @@ const Modal = (props) => {
                     maxLength="20"
                     required
                 />
-                <button className="btn" type="submit">
-                    Submit your score.
-                </button>
+                {isLoading ? (
+                    <Loading />
+                ) : (
+                    <button className="btn" type="submit">
+                        Submit your score.
+                    </button>
+                )}
             </form>
             <button onClick={handleCloseBtn} className="close-btn btn"></button>
         </div>

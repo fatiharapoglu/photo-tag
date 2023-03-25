@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { db } from "../firebase";
+import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
+
+import { db } from "../firebase";
+import Loading from "./Loading";
 
 const LeaderboardData = (props) => {
     const [list, setList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getData();
     }, [props.selectedScene]);
 
     const getData = async () => {
+        setIsLoading(true);
         const querySnapshot = await getDocs(collection(db, `lb-${props.selectedScene}`));
         const newList = [];
         querySnapshot.forEach((doc) => {
@@ -18,6 +22,7 @@ const LeaderboardData = (props) => {
         });
         const orderedList = orderData(newList);
         setList(orderedList);
+        setIsLoading(false);
     };
 
     const orderData = (array) => {
@@ -28,6 +33,8 @@ const LeaderboardData = (props) => {
         }
         return orderedList;
     };
+
+    if (isLoading) return <Loading />;
 
     return (
         <div className="leaderboard-data">
