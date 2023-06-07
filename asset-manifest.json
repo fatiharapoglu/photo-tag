@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/photo-tag/static/css/main.f5c387f6.css",
-    "main.js": "/photo-tag/static/js/main.49500461.js",
+    "main.css": "/photo-tag/static/css/main.dbee210f.css",
+    "main.js": "/photo-tag/static/js/main.140beeab.js",
     "static/media/pierre-roussel-ps1-phone2.jpg": "/photo-tag/static/media/pierre-roussel-ps1-phone2.8af9d773590969bddf35.jpg",
     "static/media/pierre-roussel-ps3-phone2.jpg": "/photo-tag/static/media/pierre-roussel-ps3-phone2.836a7f7d5347075fd5aa.jpg",
     "static/media/pierre-roussel-ps2-phone2.jpg": "/photo-tag/static/media/pierre-roussel-ps2-phone2.ad63c9c04796b31e9b28.jpg",
@@ -23,11 +23,11 @@
     "static/media/EmotionEngine.ttf": "/photo-tag/static/media/EmotionEngine.808f149f44adb750e7f4.ttf",
     "static/media/joker.jpg": "/photo-tag/static/media/joker.6bc68e3d19af67cdc59e.jpg",
     "index.html": "/photo-tag/index.html",
-    "main.f5c387f6.css.map": "/photo-tag/static/css/main.f5c387f6.css.map",
-    "main.49500461.js.map": "/photo-tag/static/js/main.49500461.js.map"
+    "main.dbee210f.css.map": "/photo-tag/static/css/main.dbee210f.css.map",
+    "main.140beeab.js.map": "/photo-tag/static/js/main.140beeab.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5c387f6.css",
-    "static/js/main.49500461.js"
+    "static/css/main.dbee210f.css",
+    "static/js/main.140beeab.js"
   ]
 }
