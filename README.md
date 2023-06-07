@@ -41,3 +41,13 @@ Created with **React** and **Firebase**.
 ## How It Looks
 
 ![ss](./src/assets/readme.png)
+
+## Contact
+
+⮕ [Portfolio](https://fatiharapoglu.dev)
+
+⮕ [LinkedIn](https://www.linkedin.com/in/fatiharapoglu/)
+
+## License
+
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
